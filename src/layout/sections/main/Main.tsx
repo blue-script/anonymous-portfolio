@@ -2,7 +2,6 @@ import React from "react";
 import styled from "styled-components";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import imgAnon from "../../../assets/images/anon-1.png";
-import { Quote } from "../quote/Quote";
 
 export const Main = () => {
   return (
