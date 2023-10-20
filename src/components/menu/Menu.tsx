@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {theme} from "../../styles/Theme";
 
 export const Menu = (props: { menuItems: Array<string> }) => {
   return (
@@ -7,12 +8,12 @@ export const Menu = (props: { menuItems: Array<string> }) => {
       <ul>
         {props.menuItems.map((item, index) => {
           return (
-            <li key={index}>
-              <a href="#">
+            <ListItem key={index}>
+              <Link href="#">
                 <span>#</span> 
-                {item}
-              </a>
-            </li>
+                <span>{item}</span>
+              </Link>
+            </ListItem>
           );
         })}
       </ul>
@@ -21,19 +22,30 @@ export const Menu = (props: { menuItems: Array<string> }) => {
 };
 
 const StyledMenu = styled.nav`
-  display: flex;
-  align-items: center;
-  gap: 32px;
   ul {
     display: flex;
     gap: 32px;
     list-style-type: none;
   }
-  span {
-    color: #c778dd;
-  }
-
-  a {
-    text-decoration: none;
-  }
 `;
+
+const ListItem = styled.li`
+  &:hover {
+    span + span {
+      color: ${theme.color.primaryFont};
+    }
+  }
+`
+const Link = styled.a`
+  font-family: 'Fira Code', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  
+  span {
+    color: ${theme.color.accent};
+  }
+  
+  span + span {
+    color: ${theme.color.secondaryFont};
+  }
+`

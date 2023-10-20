@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {theme} from "../../../styles/Theme";
 
 export const Lang = () => {
   return (
@@ -10,4 +11,17 @@ export const Lang = () => {
   );
 };
 
-const StyledLang = styled.select``;
+const StyledLang = styled.select`
+  background-color: ${theme.color.bg};
+  border: none;
+  border-radius: 0;
+  color: ${theme.color.secondaryFont};
+  text-transform: uppercase;
+  font-family: 'Fira Code', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  
+  &:hover {
+    color: ${theme.color.primaryFont};
+  }
+`;

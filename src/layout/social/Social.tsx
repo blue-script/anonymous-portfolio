@@ -14,11 +14,13 @@ export const Social = () => {
 };
 
 const StyledSocial = styled.aside`
-    position: absolute;
-    left: 17px;
-    min-width: 32px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+  position: fixed;
+  top: 0;
+  left: 17px;
+  min-width: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  z-index: 999;
 `

@@ -1,6 +1,7 @@
 import React from 'react';
 import {Icon} from '../icon/Icon';
 import styled from 'styled-components';
+import {theme} from "../../styles/Theme";
 
 export const Logo = () => {
     return (
@@ -13,13 +14,13 @@ export const Logo = () => {
 
 const StyledLogo = styled.a`
 display: flex;
-justify-content: center;
 align-items: center;
 gap: 5px;
-text-decoration: none;
 span {
-    font-size: 16px;
-    display: inline-block;
-    vertical-align: center;
+  font-family: 'Fira Code', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  color: ${theme.color.primaryFont};
 }
 `
