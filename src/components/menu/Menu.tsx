@@ -37,7 +37,6 @@ const ListItem = styled.li`
   }
 `
 const Link = styled.a`
-  font-family: 'Fira Code', sans-serif;
   font-size: 16px;
   font-weight: 500;
   

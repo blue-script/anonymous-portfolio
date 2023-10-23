@@ -17,7 +17,6 @@ const StyledLang = styled.select`
   border-radius: 0;
   color: ${theme.color.secondaryFont};
   text-transform: uppercase;
-  font-family: 'Fira Code', sans-serif;
   font-size: 16px;
   font-weight: 600;
   
