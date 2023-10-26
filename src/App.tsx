@@ -8,7 +8,7 @@ import { Works } from './layout/sections/works/Works';
 import { Slogan } from './layout/sections/slogan/Slogan';
 import { Contacts } from './layout/sections/contacts/Contacts';
 import { Footer } from './layout/footer/Footer';
-import { AboutMe } from './layout/sections/aboutme/AboutMe';
+import { AboutMe } from './layout/sections/aboutMe/AboutMe';
 
 
 

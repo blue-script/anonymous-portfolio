@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import {theme} from "../../../../styles/Theme";
 
 type SkillPropsType = {
   generalSkill: string;
@@ -20,10 +21,16 @@ const StyledSkill = styled.div`
   flex-direction: column;
   gap: 0;
   max-width: 178px;
+  width: 100%;
 `;
 const GeneralTitle = styled.div`
-  border: 1px solid white;
+  border: 1px solid ${theme.color.secondaryFont};
+  font-size: 16px;
+  font-weight: 600;
 `;
 const SkillsText = styled.div`
-  border: 1px solid white;
+  border: 1px solid ${theme.color.secondaryFont};
+  color: ${theme.color.secondaryFont};
+  font-size: 16px;
+  font-weight: 400;
 `;

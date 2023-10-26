@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../styles/Theme";
 export const Button = styled.button`
-  width: 148px;
   height: 37px;
   padding: 8px 16px;
   margin: 1px;

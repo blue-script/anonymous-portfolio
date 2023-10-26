@@ -26,7 +26,7 @@ export const Main = () => {
                 <PhotoContent>
                   <Photo src={imgAnon} alt={"photo"}/>
                 </PhotoContent>
-                <div>
+                <div>                        
                   <Icon iconId={"logoNotBackground"} width={"156"} height={"156"} viewBox={"0 0 156 156"}/>
                 </div>
                 <div>

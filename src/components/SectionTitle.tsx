@@ -1,26 +1,48 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon } from './icon/Icon';
+import {Icon} from './icon/Icon';
+import {theme} from "../styles/Theme";
 
 type SectionTitlePropsType = {
-    sectionName: string
+  sectionName: string
+  lineWidth?: string
 }
 
 export const SectionTitle = (props: SectionTitlePropsType) => {
-    return (
-        <StyledSectionTitle>
-            <Char>#</Char>
-            <span>{props.sectionName}</span>
-            <Icon iconId={"lineTitle"} width={"239"} height={"2"} viewBox={"0 0 239 2"}/>
-        </StyledSectionTitle>
-    );
+  return (
+      <StyledSectionTitle lineWidth={props.lineWidth}>
+        <Char>#</Char>
+        <span>{props.sectionName}</span>
+      </StyledSectionTitle>
+  );
 };
 
-const StyledSectionTitle = styled.h2`
-    text-align: start;
+type StyledSectionTitle = {
+  lineWidth?: string
+}
+
+const StyledSectionTitle = styled.h2<StyledSectionTitle>`
+  text-align: start;
+
+  & span:last-child {
+    font-size: 32px;
+    font-weight: 500;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      background-color: ${theme.color.accent};
+      width: ${props => props.lineWidth || "200px"};
+      height: 1px;
+      position: absolute;
+      margin-left: 16px;
+      top: 50%;
+    }
+  }
 `
 
 const Char = styled.span`
-    color: #C778DD ;
+  color: #C778DD;
 `
 

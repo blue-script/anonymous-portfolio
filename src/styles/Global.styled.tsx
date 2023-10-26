@@ -33,5 +33,16 @@ export const GlobalStyle = createGlobalStyle`
   button {
     background-color: unset;
     border: none;
+    cursor: pointer;
+  }
+  
+  section {
+    padding: 56px;
+  }
+  
+  p {
+    color: ${theme.color.secondaryFont};
+    font-size: 16px;
+    font-weight: 400;
   }
 `
