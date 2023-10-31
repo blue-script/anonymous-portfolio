@@ -10,7 +10,7 @@ export const Footer = () => {
   return (
       <StyledFooter>
         <Container>
-          <FlexWrapper justify="space-between" gap="10px">
+          <FlexWrapper justify="space-between">
             <Signatures/>
             <Media/>
           </FlexWrapper>

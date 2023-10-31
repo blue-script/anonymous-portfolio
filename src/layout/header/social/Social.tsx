@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Icon } from '../../components/icon/Icon';
+import { Icon } from '../../../components/icon/Icon';
+import {theme} from "../../../styles/Theme";
 
 export const Social = () => {
     return (
@@ -22,5 +23,13 @@ const StyledSocial = styled.aside`
   flex-direction: column;
   align-items: center;
   gap: 8px;
-  z-index: 999;
+  z-index: 99999;
+
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+  
+  @media ${theme.media.tablet} {
+    display: none;
+  }  
 `

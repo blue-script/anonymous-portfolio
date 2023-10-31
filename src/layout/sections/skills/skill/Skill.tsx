@@ -20,7 +20,6 @@ const StyledSkill = styled.div`
   display: flex;
   flex-direction: column;
   gap: 0;
-  max-width: 178px;
   width: 100%;
 `;
 const GeneralTitle = styled.div`

@@ -23,4 +23,9 @@ const StyledLang = styled.select`
   &:hover {
     color: ${theme.color.primaryFont};
   }
+
+  @media ${theme.media.tablet} {
+    font-size: 32px;
+    font-weight: 400;
+  }
 `;

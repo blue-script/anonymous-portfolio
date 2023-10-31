@@ -13,14 +13,15 @@ export const Logo = () => {
 };
 
 const StyledLogo = styled.a`
-display: flex;
-align-items: center;
-gap: 5px;
-span {
-  font-family: 'Fira Code', sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: normal;
-  color: ${theme.color.primaryFont};
-}
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  
+  span {
+    font-family: 'Fira Code', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    color: ${theme.color.primaryFont};
+  }
 `

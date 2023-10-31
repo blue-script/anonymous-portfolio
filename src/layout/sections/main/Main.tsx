@@ -6,13 +6,14 @@ import {Container} from "../../../components/Container";
 import {theme} from "../../../styles/Theme";
 import {Button} from "../../../components/Button";
 import {Icon} from "../../../components/icon/Icon";
+import {font} from "../../../styles/Common";
 
 export const Main = () => {
   return (
       <StyledMain>
         <Container>
-          <FlexWrapper justify={"space-between"} align={"center"}>
-            <div>
+          <FlexWrapper justify={"space-around"} align={"center"} wrap={"wrap"}>
+            <LeftSide>
               <MainTitle>
                 Aleksandr is a <span>web designer</span> and <span>front-end developer</span>
               </MainTitle>
@@ -20,13 +21,13 @@ export const Main = () => {
                 He crafts responsive websites where technologies meet creativity
               </MainText>
               <Button>Contact me!!</Button>
-            </div>
+            </LeftSide>
             <RightSide>
               <PhotoWrapper>
                 <PhotoContent>
                   <Photo src={imgAnon} alt={"photo"}/>
                 </PhotoContent>
-                <div>                        
+                <div>
                   <Icon iconId={"logoNotBackground"} width={"156"} height={"156"} viewBox={"0 0 156 156"}/>
                 </div>
                 <div>
@@ -44,21 +45,31 @@ export const Main = () => {
   );
 };
 
-const StyledMain = styled.main`
+const StyledMain = styled.section`
   height: 100vh;
   display: flex;
 `;
 
-const MainTitle = styled.h1`
-  font-size: 32px;
-  font-weight: 600;
+const LeftSide = styled.div`
+  max-width: 538px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  
+  @media ${theme.media.mobile} {
+    & button {
+      display: none;
+    }
+  }
+`
 
+const MainTitle = styled.h1`
+  ${font({weight: 600, Fmin: 28, Fmax: 32})}
+  
   & span {
     color: ${theme.color.accent};
     font-size: 32px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-style: normal; 
   }
 `;
 
@@ -67,7 +78,7 @@ const MainText = styled.p`
   font-size: 16px;
   font-weight: 400;
   line-height: 25px; /* 156.25% */
-  margin: 32px 0 24px;
+  margin: 25px 0 0;
   max-width: 464px;
 `;
 
@@ -75,6 +86,8 @@ const RightSide = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-end;
+  min-width: 316px;
 `
 
 const PhotoWrapper = styled.div`
@@ -86,6 +99,11 @@ const PhotoWrapper = styled.div`
     left: -12px;
     top: 84px;
     z-index: -1;
+    
+    @media ${theme.media.mobile} {
+      top: 56px;
+      left: -8px;
+    }
   }
 
   div:nth-child(3) {
@@ -93,22 +111,35 @@ const PhotoWrapper = styled.div`
     right: 16px;
     bottom: 56px;
     z-index: 1;
+
+    @media ${theme.media.mobile} {
+      bottom: 38px;
+      right: 10px;
+    }
   }
 `
 
 const PhotoContent = styled.div`
-  width: 457px;
+  width: 458px;
   height: 386px;
   overflow: hidden;
+
+  @media ${theme.media.mobile} {
+    width: 308px;
+    height: 260px;
+  }
 `
 
 const Photo = styled.img`
-  //background-size: 142% 210%;
-  //background-position: -130.245px -75.697px;
   z-index: 0;
   width: 142%;
   margin-left: -130px;
   margin-top: -75px;
+
+  @media ${theme.media.mobile} {
+    margin-left: -87px;
+    margin-top: -51px;
+  }
 `;
 
 const TextUnderMainPhoto = styled.div`
@@ -132,6 +163,9 @@ const TextUnderMainPhoto = styled.div`
     font-weight: 600;
   }
 
+  @media ${theme.media.mobile} {
+    margin: 0;
+  }
 `
 
 const Rect = styled.div`
@@ -140,5 +174,3 @@ const Rect = styled.div`
   border: 1px solid #c778dd;
   background-color: #c778dd;
 `;
-
-

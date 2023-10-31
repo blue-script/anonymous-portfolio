@@ -7,7 +7,7 @@ export const Media = () => {
   return (
     <StyledMedia>
       <h3>Media</h3>
-      <FlexWrapper gap={"8px"}>
+      <FlexWrapper>
         <Icon
           iconId={"github"}
           width={"32"}

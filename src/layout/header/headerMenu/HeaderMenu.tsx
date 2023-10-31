@@ -1,10 +1,11 @@
 import React from "react";
 import styled from "styled-components";
-import {theme} from "../../styles/Theme";
+import {theme} from "../../../styles/Theme";
+import {Lang} from "../lang/Lang";
 
-export const Menu = (props: { menuItems: Array<string> }) => {
+export const HeaderMenu = (props: { menuItems: Array<string> }) => {
   return (
-    <StyledMenu>
+    <StyledHeaderMenu>
       <ul>
         {props.menuItems.map((item, index) => {
           return (
@@ -17,15 +18,23 @@ export const Menu = (props: { menuItems: Array<string> }) => {
           );
         })}
       </ul>
-    </StyledMenu>
+      <Lang />
+    </StyledHeaderMenu>
   );
 };
 
-const StyledMenu = styled.nav`
+const StyledHeaderMenu = styled.nav`
+  display: flex;
+  gap: 32px;
+  
   ul {
     display: flex;
     gap: 32px;
     list-style-type: none;
+  }
+  
+  @media ${theme.media.tablet} {
+    display: none;
   }
 `;
 
